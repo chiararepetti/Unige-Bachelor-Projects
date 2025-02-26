@@ -1,0 +1,46 @@
+:root {
+    --clr-notification-neon: hsl(272, 100%, 44%); /* Un colore neon giallo */
+    --clr-notification-bg: hsl(279, 100%, 96%);   /* Un colore di sfondo giallo scuro */
+}
+
+#notification {
+    left: 0;
+    display: none; /* Nasconde la notifica di default */
+    margin-top: 1em;
+    font-size: 1.25rem;
+    padding: 1em;
+    color: var(--clr-notification-bg);
+    background-color: var(--clr-notification-neon);
+    border: var(--clr-notification-neon) 0.125em solid;
+    border-radius: 0.5em;
+    text-align: center;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-notification-neon), 0 0 0.5em 0 var(--clr-notification-neon);
+    position: relative;
+    margin: 10px auto;
+    max-width: 400px;
+}
+
+#notification::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-notification-neon);
+    opacity: 0;
+    background-color: var(--clr-notification-neon);
+    z-index: -1;
+    transition: opacity 100ms linear;
+    border-radius: 0.5em;
+}
+
+#notification.show {
+    display: block; 
+}
+
+#notification.show::after {
+    opacity: 1;
+}
+

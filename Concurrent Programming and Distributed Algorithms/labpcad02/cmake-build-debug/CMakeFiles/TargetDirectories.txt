@@ -1,0 +1,3 @@
+C:/Users/giova/Desktop/labpcad02/cmake-build-debug/CMakeFiles/labpcad02.dir
+C:/Users/giova/Desktop/labpcad02/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/giova/Desktop/labpcad02/cmake-build-debug/CMakeFiles/rebuild_cache.dir
